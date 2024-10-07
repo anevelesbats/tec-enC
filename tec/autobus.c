@@ -69,6 +69,30 @@ bool ab__a_place_debout(const struct autobus *a) {
   return a->debout < a->max_debout;
 }
 
+void dec_place_assis(struct autobus *a){
+a->assis--;
+}
+
+void inc_place_assis(struct autobus *a){
+a->assis++;
+}
+
+void dec_place_debout(struct autobus *a){
+a->debout--;
+}
+
+void inc_place_debout(struct autobus *a){
+a->debout++;
+}
+
+bool place_dispo_assis(struct autobus *a){
+return a->assis < a->max_assis;
+}
+
+bool place_dispo_debout(struct autobus *a){
+return a->debout < a->max_debout;
+}
+
 void __ab__nombre_de_personnes(struct autobus *a, int place, int sens){ //place : 1 assis, 2 debout
                                                                      //sens : 1 incrément 2 décrément
   switch (place)
