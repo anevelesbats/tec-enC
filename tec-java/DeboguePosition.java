@@ -1,8 +1,9 @@
 class DeboguePosition {
-
+    
 
     void test1()
     {
+        
         System.out.println("Cas de test 1 : \n");
         Position position = new Position();
         afficher_etat(position);
@@ -42,9 +43,13 @@ class DeboguePosition {
     }
 
     public static void main(String[] args) {
+
         new DeboguePosition().test1();
+
         new DeboguePosition().test2();
+        
         new DeboguePosition().test3();
+        
         new DeboguePosition().test4();
 
     }
