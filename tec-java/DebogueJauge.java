@@ -6,6 +6,32 @@ public class DebogueJauge {
         System.out.println("\nMéthode 1" + "\nVert : " + jauge1.estVert() + "\nRouge : " + jauge1.estRouge());
     }
 
+    void testSup(int n){
+        while(n > -2){
+            Jauge jauge3 = new Jauge(3, n);
+            System.out.println("\nMéthode 3 n = " + n + "\nVert : " + jauge3.estVert() + "\nRouge : " + jauge3.estRouge());
+            if(jauge3.estVert() == jauge3.estRouge() && jauge3.estVert() == true){
+                System.out.println("Il y a une anomalie\n");
+            }else{
+                System.out.println("Il n'y a pas d'anomalie\n");
+            }
+            n = n - 1;
+        }
+    }
+
+    void testInf(int m){
+        while(m < 6){
+            Jauge jauge3 = new Jauge(3, m);
+            System.out.println("\nMéthode 4 m = " + m + "\nVert : " + jauge3.estVert() + "\nRouge : " + jauge3.estRouge());
+            if(jauge3.estVert() == jauge3.estRouge() && jauge3.estVert() == true){
+                System.out.println("Il y a une anomalie\n");
+            }else{
+                System.out.println("Il n'y a pas d'anomalie\n");
+            }
+            m = m + 1;
+        }
+    }
+
     public static void main(String[] args) {
 
         new DebogueJauge().testDansIntervalle();
@@ -14,10 +40,10 @@ public class DebogueJauge {
         System.out.println("\nMéthode 2" + "\nVert : " + jauge2.estVert() + "\nRouge : " + jauge2.estRouge());
         
         int n = 5;
-        while(n > 0){
-        Jauge jauge3 = new Jauge(3, n);
-        System.out.println("\nMéthode 3 n = " + n + "\nVert : " + jauge3.estVert() + "\nRouge : " + jauge3.estRouge());
-        n = n - 1;
-        }
+        new DebogueJauge().testSup(n);
+
+        int m = -2;
+        new DebogueJauge().testInf(m);
+        
     }
 }
