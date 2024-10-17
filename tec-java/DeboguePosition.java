@@ -3,14 +3,21 @@ public class DeboguePosition {
 
     void testDehorsInitial ()
     {
+        System.out.println("Cas de test 1 : \n");
         Position position = new Position();
-        System.out.println("Assis :" + position.estAssis() + "\nDebout :" + position.estDebout() 
-        + "\nDehors : " + position.estDehors() + "\nDedans : " + position.estInterieur());
+        afficher_etat(position);
     }
 
     void testDehorsAssis(){
+        System.out.println("Cas de test 2 : \n");
         Position position2 = new Position().assis();
-        System.out.println("Position : " + position2.estAssis());
+        afficher_etat(position2);
+    }
+
+    void afficher_etat(Position position)
+    {
+        System.out.println("Assis :" + position.estAssis() + "\nDebout :" + position.estDebout() 
+        + "\nDehors : " + position.estDehors() + "\nDedans : " + position.estInterieur() + "\n");
     }
 
     public static void main(String[] args) {
