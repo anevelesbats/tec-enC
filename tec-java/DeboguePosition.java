@@ -14,6 +14,13 @@ public class DeboguePosition {
         afficher_etat(position2);
     }
 
+    void testDehorsDebout()
+    {
+        System.out.println("Cas de test 3 : \n");
+        Position position3 = new Position().debout();
+        afficher_etat(position3);
+    }
+
     void afficher_etat(Position position)
     {
         System.out.println("Assis :" + position.estAssis() + "\nDebout :" + position.estDebout() 
@@ -23,5 +30,6 @@ public class DeboguePosition {
     public static void main(String[] args) {
         new DeboguePosition().testDehorsInitial();
         new DeboguePosition().testDehorsAssis();
+        new DeboguePosition().testDehorsDebout();
     }
 }
