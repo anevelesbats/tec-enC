@@ -3,7 +3,8 @@ public class DebogueJauge {
 
     void testDansIntervalle(){
         Jauge jauge1 = new Jauge(5, 3);
-        System.out.println("\nMéthode 1" + "\nVert : " + jauge1.estVert() + "\nRouge : " + jauge1.estRouge());
+        System.out.println("\nMéthode 1" + "\nVert : " 
+        + jauge1.estVert() + "\nRouge : " + jauge1.estRouge());
     }
 
     void testSup(int n){
