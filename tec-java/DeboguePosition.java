@@ -1,35 +1,51 @@
-public class DeboguePosition {
+class DeboguePosition {
 
 
-    void testDehorsInitial ()
+    void test1()
     {
         System.out.println("Cas de test 1 : \n");
         Position position = new Position();
         afficher_etat(position);
     }
 
-    void testDehorsAssis(){
+    void test2(){
         System.out.println("Cas de test 2 : \n");
-        Position position2 = new Position().assis();
-        afficher_etat(position2);
+        Position position = new Position().assis();
+        afficher_etat(position);
     }
 
-    void testDehorsDebout()
+    void test3()
     {
         System.out.println("Cas de test 3 : \n");
-        Position position3 = new Position().debout();
-        afficher_etat(position3);
+        Position position = new Position().debout();
+        afficher_etat(position);
+    }
+
+    void test4()
+    {
+        System.out.println("Cas de test 4 : \n");
+        Position position = new Position();
+        afficher_etat(position);
+
+        position = new Position().assis();
+        afficher_etat(position);
+
+        position = new Position();
+        afficher_etat(position);
+        
     }
 
     void afficher_etat(Position position)
     {
         System.out.println("Assis :" + position.estAssis() + "\nDebout :" + position.estDebout() 
-        + "\nDehors : " + position.estDehors() + "\nDedans : " + position.estInterieur() + "\n");
+        + "\nDehors : " + position.estDehors() + "\nDedans : " + position.estInterieur() + "\n" + position.toString() + "\n");
     }
 
     public static void main(String[] args) {
-        new DeboguePosition().testDehorsInitial();
-        new DeboguePosition().testDehorsAssis();
-        new DeboguePosition().testDehorsDebout();
+        new DeboguePosition().test1();
+        new DeboguePosition().test2();
+        new DeboguePosition().test3();
+        new DeboguePosition().test4();
+
     }
 }
