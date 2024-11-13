@@ -2,8 +2,15 @@
 
 class Autobus {
 
+  int numArret;
+  Jauge Assis;
+  Jauge Debout;
+  PassagerStandard[] Passagers;
+
   // constructor
   public Autobus(int nbPlaceAssise, int nbPlaceDebout) {
+    Assis = new Jauge(nbPlaceAssise, 0);
+    Debout = new Jauge(nbPlaceDebout, 0);
   }
 
   //methods
