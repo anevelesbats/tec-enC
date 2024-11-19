@@ -1,40 +1,63 @@
 //source without documentation for javadoc
 
 class PassagerStandard {
+  
+  Position positionPassager;
+  String nom;
+  int destination;
 
   // constructor
   public PassagerStandard(String nom, int destination) {
+    positionPassager = new Position();
   }
 
   //methods
   public String nom() {
-    return null;
+    return nom;
   }
 
-  public boolean estDehors() { 
-    return false;
+  public boolean estDehors() {
+    return positionPassager.estDehors();
   }
 
   public boolean estAssis() {
-    return false;
+    return positionPassager.estAssis();
   }
 
   public boolean estDebout() {
-    return false;
+    return positionPassager.estDebout();
   }
 
   public void changerEnDehors() {
+    positionPassager = positionPassager.dehors();
   }
 
   public void changerEnAssis() {
+    positionPassager = positionPassager.assis();
   }
 
   public void changerEnDebout() {
+    positionPassager = positionPassager.debout();
   }
 
-  public void monterDans(Autobus t) {
+  public void monterDans(Autobus t) {  
+    if (t.aPlaceAssise()) {
+      t.monteeDemanderAssis(this); //this : objet dans lequel on se trouve
+    }
+    else if (t.aPlaceDebout()) {
+      t.monteeDemanderDebout(this);
+    }
+
   }
 
   public void nouvelArret(Autobus t, int numeroArret) {
+    if (numeroArret == destination) {
+      t.arretDemanderSortie();
+    }
+    /*
+    if (t.aPlaceDebout()){
+      t.arretDemanderDebout(this);
+    }
+      */
   }
 }
