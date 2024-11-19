@@ -1,4 +1,4 @@
-class Simple {
+public class Simple {
 
   static public void main (String[] args) {
     Autobus serenity = new Autobus(1, 2);

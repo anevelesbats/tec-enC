@@ -8,7 +8,7 @@
  * @author Georgy
  * @since 2007-2019
  **/
-class Position {
+public class Position {
 
   private final int DEHORS = 1;
   private final int ASSIS  = 2;

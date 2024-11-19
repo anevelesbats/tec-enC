@@ -1,6 +1,6 @@
 //source without documentation for javadoc
 
-class PassagerStandard {
+public class PassagerStandard {
   
   Position positionPassager;
   String nom;
@@ -9,11 +9,13 @@ class PassagerStandard {
   // constructor
   public PassagerStandard(String nom, int destination) {
     positionPassager = new Position();
+    this.nom = nom;
+    this.destination = destination;
   }
 
   //methods
   public String nom() {
-    return nom;
+    return nom + "RR";
   }
 
   public boolean estDehors() {
@@ -52,12 +54,16 @@ class PassagerStandard {
 
   public void nouvelArret(Autobus t, int numeroArret) {
     if (numeroArret == destination) {
-      t.arretDemanderSortie();
+      t.arretDemanderSortie(this);
     }
     /*
     if (t.aPlaceDebout()){
       t.arretDemanderDebout(this);
     }
       */
+  }
+
+  public String toString() {
+    return this.nom + " " + this.positionPassager;
   }
 }

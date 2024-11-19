@@ -1,4 +1,4 @@
-class DeboguePosition {
+public class DeboguePosition {
     
 
     void test1()
