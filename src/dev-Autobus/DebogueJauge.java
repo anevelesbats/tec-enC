@@ -45,6 +45,5 @@ public class DebogueJauge {
 
         int m = -2;
         new DebogueJauge().testInf(m);
-        
     }
 }
