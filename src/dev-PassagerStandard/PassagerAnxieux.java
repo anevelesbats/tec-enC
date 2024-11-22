@@ -1,13 +1,13 @@
 //source without documentation for javadoc
 
-public class PassagerStandard implements Passager{
+public class PassagerAnxieux implements Passager {
   
   Position positionPassager;
   String nom;
   int destination;
 
   // constructor
-  public PassagerStandard(String nom, int destination) {
+  public PassagerAnxieux(String nom, int destination) {
     positionPassager = new Position();
     this.nom = nom;
     this.destination = destination;
@@ -42,25 +42,22 @@ public class PassagerStandard implements Passager{
     positionPassager = positionPassager.debout();
   }
 
-  public void monterDans(Autobus t, int numero_arret) {  
-    if (t.aPlaceAssise()) {
-      t.monteeDemanderAssis(this); //this : objet dans lequel on se trouve
-    }
-    else if (t.aPlaceDebout()) {
+  public void monterDans(Autobus t, int numeroArret) {  
+    if (numeroArret + 3 == destination ){
       t.monteeDemanderDebout(this);
     }
-
+    else if (t.aPlaceAssise()) {
+        t.monteeDemanderAssis(this); //this : objet dans lequel on se trouve
+    }
   }
 
   public void nouvelArret(Autobus t, int numeroArret) {
-    if (numeroArret == destination) {
-      t.arretDemanderSortie(this);
-    }
-    /*
-    if (t.aPlaceDebout()){
+    if (numeroArret == destination - 3) {
       t.arretDemanderDebout(this);
     }
-      */
+    else if (numeroArret == destination) {
+      t.arretDemanderSortie(this);
+    }
   }
   public String toString() {
     
