@@ -15,21 +15,21 @@ class Autobus {
     return false;
   }
 
-  public void monteeDemanderAssis(PassagerStandard p) {
+  public void monteeDemanderAssis(Passager p) {
   }
 
-  public void monteeDemanderDebout(PassagerStandard p) {
+  public void monteeDemanderDebout(Passager p) {
   }
 
   public void allerArretSuivant() {
   }
 
-  public void arretDemanderAssis(PassagerStandard p) {
+  public void arretDemanderAssis(Passager p) {
   }
 
-  public void arretDemanderDebout(PassagerStandard p) {
+  public void arretDemanderDebout(Passager p) {
   }
 
-  public void arretDemanderSortie(PassagerStandard p) {
+  public void arretDemanderSortie(Passager p) {
   }
 }

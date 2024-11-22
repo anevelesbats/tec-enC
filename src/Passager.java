@@ -16,7 +16,7 @@ interface Passager {
   
   public void changerEnDebout();
 
-  public void monterDans(Autobus v);
+  public void monterDans(Autobus v, int numeroArret);
   
   public void nouvelArret(Autobus v, int numeroArret);
 }
