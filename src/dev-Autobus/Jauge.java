@@ -42,7 +42,8 @@ class Jauge {
    * @return vrai si niveau >=  max.
    *
    */
-  public boolean estRouge() {
+
+   public boolean estRouge() {
     return valeur >= MAX;
   }
 
