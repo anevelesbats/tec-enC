@@ -7,13 +7,6 @@ public class DebogueJauge {
         + jauge1.estVert() + "\nRouge : " + jauge1.estRouge());
     }
 
-    void testHorsIntervalle(){
-        Jauge jauge2 = new Jauge(3, 5);
-        System.out.println("\nMéthode 2" + "\nVert : " 
-        + jauge2.estVert() + "\nRouge : " + jauge2.estRouge());
-
-    }
-
     void testSup(int n){
         while(n > -2){
             Jauge jauge3 = new Jauge(3, n);
@@ -43,13 +36,14 @@ public class DebogueJauge {
     public static void main(String[] args) {
 
         new DebogueJauge().testDansIntervalle();
-        new DebogueJauge().testHorsIntervalle();
 
+        Jauge jauge2 = new Jauge(3, 5);
+        System.out.println("\nMéthode 2" + "\nVert : " + jauge2.estVert() + "\nRouge : " + jauge2.estRouge());
+        
         int n = 5;
         new DebogueJauge().testSup(n);
 
         int m = -2;
         new DebogueJauge().testInf(m);
-        
     }
 }
