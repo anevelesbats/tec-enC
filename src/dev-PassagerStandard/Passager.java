@@ -1,6 +1,6 @@
 
 
-interface Passager {
+public interface Passager {
 
   public String nom();
 
@@ -20,4 +20,3 @@ interface Passager {
   
   public void nouvelArret(Autobus v, int numeroArret);
 }
-

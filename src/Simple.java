@@ -11,14 +11,14 @@ class Simple {
 
     serenity.allerArretSuivant();
     //1
-    kaylee.monterDans(serenity);
+    kaylee.monterDans(serenity, serenity.numArret);
 
     System.out.println(serenity);
     System.out.println(kaylee);
 
     serenity.allerArretSuivant();
     //2
-    jayne.monterDans(serenity);
+    jayne.monterDans(serenity, serenity.numArret);
 
     System.out.println(serenity);
     System.out.println(kaylee);
@@ -26,7 +26,7 @@ class Simple {
 
     serenity.allerArretSuivant();
     //3
-    inara.monterDans(serenity);
+    inara.monterDans(serenity, serenity.numArret);
 
     System.out.println(serenity);
     System.out.println(kaylee);
