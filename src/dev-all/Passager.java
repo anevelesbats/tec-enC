@@ -1,6 +1,6 @@
 
 
-interface Passager {
+public interface Passager {
 
   public String nom();
 
@@ -16,12 +16,7 @@ interface Passager {
   
   public void changerEnDebout();
 
-<<<<<<< HEAD
-  public void monterDans(Autobus v);
-=======
   public void monterDans(Autobus v, int numeroArret);
->>>>>>> 21ab3ac7269792dd15a388fe519ff1c909e5761f
   
   public void nouvelArret(Autobus v, int numeroArret);
 }
-

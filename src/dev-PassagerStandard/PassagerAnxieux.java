@@ -1,14 +1,13 @@
 //source without documentation for javadoc
 
-<<<<<<< HEAD
-public class PassagerStandard implements Passager{
+public class PassagerAnxieux implements Passager {
   
   Position positionPassager;
   String nom;
   int destination;
 
   // constructor
-  public PassagerStandard(String nom, int destination) {
+  public PassagerAnxieux(String nom, int destination) {
     positionPassager = new Position();
     this.nom = nom;
     this.destination = destination;
@@ -41,37 +40,24 @@ public class PassagerStandard implements Passager{
 
   public void changerEnDebout() {
     positionPassager = positionPassager.debout();
-=======
-public class PassagerStandard extends FactoPassager{
-
-  // constructor
-  public PassagerStandard(String nom, int destination) {
-    super(nom, destination); 
->>>>>>> 21ab3ac7269792dd15a388fe519ff1c909e5761f
   }
 
-  public void monterDans(Autobus t, int numero_arret) {  
-    if (t.aPlaceAssise()) {
-      t.monteeDemanderAssis(this); //this : objet dans lequel on se trouve
-    }
-    else if (t.aPlaceDebout()) {
+  public void monterDans(Autobus t, int numeroArret) {  
+    if (numeroArret + 3 == destination ){
       t.monteeDemanderDebout(this);
     }
-
+    else if (t.aPlaceAssise()) {
+        t.monteeDemanderAssis(this); //this : objet dans lequel on se trouve
+    }
   }
 
   public void nouvelArret(Autobus t, int numeroArret) {
-    if (numeroArret == destination) {
-      t.arretDemanderSortie(this);
-    }
-<<<<<<< HEAD
-    /*
-    if (t.aPlaceDebout()){
+    if (numeroArret == destination - 3) {
       t.arretDemanderDebout(this);
     }
-      */
-=======
->>>>>>> 21ab3ac7269792dd15a388fe519ff1c909e5761f
+    else if (numeroArret == destination) {
+      t.arretDemanderSortie(this);
+    }
   }
   public String toString() {
     
