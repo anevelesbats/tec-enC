@@ -1,6 +1,6 @@
 //source without documentation for javadoc
 
-public class PassagerStandard {
+public class PassagerStandard implements Passager {
   
   Position positionPassager;
   String nom;

@@ -1,5 +1,9 @@
 {
     "files.associations": {
         "__internes.h": "c"
-    }
+    },
+    "java.project.sourcePaths": [
+        "src/dev-PassagerStandard"
+    ],
+    "java.project.referencedLibraries": []
 }
