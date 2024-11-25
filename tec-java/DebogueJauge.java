@@ -29,9 +29,9 @@ public class DebogueJauge {
 
     void testInf(int m){
         while(m < 6){
-            Jauge jauge3 = new Jauge(3, m);
-            System.out.println("\nMéthode 4 m = " + m + "\nVert : " + jauge3.estVert() + "\nRouge : " + jauge3.estRouge());
-            if(jauge3.estVert() == jauge3.estRouge() && jauge3.estVert() == true){
+            Jauge jauge4 = new Jauge(3, m);
+            System.out.println("\nMéthode 4 m = " + m + "\nVert : " + jauge4.estVert() + "\nRouge : " + jauge4.estRouge());
+            if(jauge4.estVert() == jauge4.estRouge() && jauge4.estVert() == true){
                 System.out.println("Il y a une anomalie\n");
             }else{
                 System.out.println("Il n'y a pas d'anomalie\n");

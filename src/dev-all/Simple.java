@@ -3,42 +3,51 @@ class Simple {
   static public void main (String[] args) {
     Autobus serenity = new Autobus(1, 2);
 
-    PassagerStandard kaylee = new PassagerStandard("Kaylee", 4);
-    PassagerStandard jayne = new PassagerStandard("Jayne", 4);
-    PassagerStandard inara = new PassagerStandard("Inara", 5);
+    Passager kaylee = new PassagerStandard("Kaylee", 4);
+    Passager jayne = new PassagerStandard("Jayne", 4);
+    Passager inara = new PassagerStandard("Inara", 5);
+    Passager raph = new PassagerStresse("Raphael", 5);
+    Passager fiona = new PassagerAnxieux("Fiona",4); 
 
     System.out.println(serenity);
 
     serenity.allerArretSuivant();
     //1
-    kaylee.monterDans(serenity);
+    raph.monterDans(serenity, serenity.numArret);
+    kaylee.monterDans(serenity, serenity.numArret);
+    fiona.monterDans(serenity, serenity.numArret);
 
     System.out.println(serenity);
     System.out.println(kaylee);
+    System.out.println(raph);
+    System.out.println(fiona);
 
     serenity.allerArretSuivant();
     //2
-    jayne.monterDans(serenity);
+    jayne.monterDans(serenity, serenity.numArret);
 
     System.out.println(serenity);
     System.out.println(kaylee);
     System.out.println(jayne);
+    System.out.println(raph);
+    System.out.println(fiona);
 
     serenity.allerArretSuivant();
     //3
-    inara.monterDans(serenity);
+    inara.monterDans(serenity, serenity.numArret);
 
     System.out.println(serenity);
     System.out.println(kaylee);
     System.out.println(jayne);
     System.out.println(inara);
+    System.out.println(raph);
+    System.out.println(fiona);
 
     serenity.allerArretSuivant();
-    //4
-    System.out.println(serenity);
     System.out.println(kaylee);
     System.out.println(jayne);
-    System.out.println(inara);
+    System.out.println(raph);
+    System.out.println(fiona);
 
     serenity.allerArretSuivant();
     //5
@@ -46,6 +55,9 @@ class Simple {
     System.out.println(kaylee);
     System.out.println(jayne);
     System.out.println(inara);
+    System.out.println(fiona);
+    System.out.println(raph);
+
   }
 }
 
