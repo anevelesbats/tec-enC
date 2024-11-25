@@ -19,4 +19,7 @@ public interface Passager {
   public void monterDans(Autobus v, int numeroArret);
   
   public void nouvelArret(Autobus v, int numeroArret);
+  
+  public String toString();
+
 }

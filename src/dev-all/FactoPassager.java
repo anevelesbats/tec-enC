@@ -39,4 +39,9 @@ public abstract class FactoPassager implements Passager{
     public void changerEnDebout() {
         positionPassager = positionPassager.debout();
     }
+    public String toString() {
+    
+        return this.nom + " " + this.positionPassager;
+    }
+    
 }

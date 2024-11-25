@@ -28,9 +28,5 @@ public class PassagerStresse extends FactoPassager {
       t.arretDemanderSortie(this);
     }
   }
-  public String toString() {
-    
-    return this.nom + " " + this.positionPassager;
-  }
 }
 
