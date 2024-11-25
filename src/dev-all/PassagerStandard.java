@@ -1,53 +1,10 @@
 //source without documentation for javadoc
 
-<<<<<<< HEAD
-public class PassagerStandard implements Passager{
-  
-  Position positionPassager;
-  String nom;
-  int destination;
-
-  // constructor
-  public PassagerStandard(String nom, int destination) {
-    positionPassager = new Position();
-    this.nom = nom;
-    this.destination = destination;
-  }
-
-  //methods
-  public String nom() {
-    return nom;
-  }
-
-  public boolean estDehors() {
-    return positionPassager.estDehors();
-  }
-
-  public boolean estAssis() {
-    return positionPassager.estAssis();
-  }
-
-  public boolean estDebout() {
-    return positionPassager.estDebout();
-  }
-
-  public void changerEnDehors() {
-    positionPassager = positionPassager.dehors();
-  }
-
-  public void changerEnAssis() {
-    positionPassager = positionPassager.assis();
-  }
-
-  public void changerEnDebout() {
-    positionPassager = positionPassager.debout();
-=======
 public class PassagerStandard extends FactoPassager{
 
   // constructor
   public PassagerStandard(String nom, int destination) {
     super(nom, destination); 
->>>>>>> 21ab3ac7269792dd15a388fe519ff1c909e5761f
   }
 
   public void monterDans(Autobus t, int numero_arret) {  
@@ -64,14 +21,6 @@ public class PassagerStandard extends FactoPassager{
     if (numeroArret == destination) {
       t.arretDemanderSortie(this);
     }
-<<<<<<< HEAD
-    /*
-    if (t.aPlaceDebout()){
-      t.arretDemanderDebout(this);
-    }
-      */
-=======
->>>>>>> 21ab3ac7269792dd15a388fe519ff1c909e5761f
   }
   public String toString() {
     
