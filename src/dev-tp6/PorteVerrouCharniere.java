@@ -9,6 +9,7 @@ public class PorteVerrouCharniere{
     }
     void verrouiller(){
         estDeverouille = false;
+
     }
     void deverouiller(){
         estDeverouille = true; 
@@ -22,20 +23,30 @@ public class PorteVerrouCharniere{
     }
     
     public void fermer() {
-        if (estVerouille() == false){
-            porteCharniereVerrou.fermer();
-            verrouiller();
+        if (estFerme()){
+            System.out.println("Porte déjà fermée tocard");
+        }
+        else{
+            if (estVerouille() == false){
+                porteCharniereVerrou.fermer();
+            }
+            else{
+                System.out.println("Porte vérouillée, tu ne peux pas la fermer");
+            }
         }
     }
     
     public void ouvrir() {
-        if (estVerouille() == false) {
-            porteCharniereVerrou.ouvrir();
+        if (estFerme() == false){
+            System.out.println("La porte est ouverte tocard");
         }
         else{
-            deverouiller();
-            porteCharniereVerrou.ouvrir(); 
+            if (estVerouille() == false) {
+                porteCharniereVerrou.ouvrir();
+            }
+            else{
+                System.out.println("Le verrou est lock tu dois le dévérouiller");
+            }
         }
-        
     }
 }
